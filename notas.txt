@@ -1,0 +1,50 @@
+Node =  Motor V8 standalone
+
+Criar um projeto:
+Dentro da pasta -> yarn init -y
+Isso cria o .json do package
+
+express -> Serve para lidar com as rotas
+
+a variavel server é dada pela função do express()
+
+A partir do server, pode se criar uma função get q vai receber as requisições
+na função get, o primeiro parametro é a rota e o segundo é a função a ser executada
+
+Dentro da string utilizada no send da resposta, pode-se utilizar ${} para inserir
+uma variável, porém, esta string agora deve ser feita utilizando crases e não aspas
+
+Atualmente, em vez de enviar um send, se envia um json, por ser algo mais padrão
+na comunicação
+
+O nodemon serve como dependencia de desenvolvimento para atualizar o server durante a 
+execução
+
+O router é expecifico para a criação de rotas
+
+Pra utilizar algo exportado por outro arquivo, utiliza-se o método "use" no express
+
+As informações passadas para o post vão parar no req.body
+
+Por padrão o express n entende json, então, pode-se dizer para o server que ele usa
+o express.json
+
+Model -> Banco
+View -> Front
+Controller -> Controle do banco
+
+No model, se cria o schema do banco de dados, em que neste, o timestamp salva 
+a data em que o dado foi criado e atualizado
+
+O model serve pra exportar o schema como sendo um model de bd
+
+O controller pode ser simplesmente um objeto json, então ele pode começar diretamente
+com o exports
+
+Pra criar, pode-se usar tanto o método create, como o metodo store
+
+Quando substitui a função do objeto controller no lugar da função do post, automaticamente
+a req e a res são mandadas pra lá e essa função é executada lá
+
+Como as requisições estão no req.body, é possivel acessar os diferentes dados do json
+via ela, por exemplo, req.body.users
